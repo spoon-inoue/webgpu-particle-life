@@ -12,15 +12,22 @@ function addInputEvent(name: 'count' | 'colors' | 'optimization') {
   const inputs = document.querySelectorAll<HTMLInputElement>(`input[name="${name}"]`)
   for (const input of inputs) {
     input.addEventListener('change', () => {
-      settigs[name] = input.value
       updateLink()
     })
   }
 }
 
+function getCheckedValue(name: 'count' | 'colors' | 'optimization') {
+  return document.querySelector<HTMLInputElement>(`input[name="${name}"]:checked`)?.value ?? settigs[name]
+}
+
 const link = document.querySelector<HTMLAnchorElement>('main a')!
 
 function updateLink() {
+  settigs.count = getCheckedValue('count')
+  settigs.colors = getCheckedValue('colors')
+  settigs.optimization = getCheckedValue('optimization')
+
   const prefix = import.meta.env.PROD ? 'https://spoon-inoue.github.io/webgpu-particle-life/' : import.meta.env.BASE_URL
   link.href = prefix + settigs.optimization + '/?' + `particle-count=${settigs.count}&colors=${settigs.colors}`
 }
