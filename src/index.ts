@@ -22,7 +22,7 @@ const link = document.querySelector<HTMLAnchorElement>('main a')!
 
 function updateLink() {
   const prefix = import.meta.env.PROD ? 'https://spoon-inoue.github.io/webgpu-particle-life/' : import.meta.env.BASE_URL
-  link.href = prefix + '/?' + `particle-count=${settigs.count}&colors=${settigs.colors}`
+  link.href = prefix + settigs.optimization + '/?' + `particle-count=${settigs.count}&colors=${settigs.colors}`
 }
 
 updateLink()
