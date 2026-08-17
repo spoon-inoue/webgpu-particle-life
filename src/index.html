@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebGPU Particle Life</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script type="module" defer src="./index.ts"></script>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h2>Particle Count</h2>
+        <div class="radio-inputs">
+          <div class="radio-item">
+            <input type="radio" name="count" id="5k" value="5000" checked />
+            <label for="5k">5,000</label>
+          </div>
+          <div class="radio-item">
+            <input type="radio" name="count" id="10k" value="10000" />
+            <label for="10k">10,000</label>
+          </div>
+          <div class="radio-item">
+            <input type="radio" name="count" id="50k" value="50000" />
+            <label for="50k">50,000</label>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>Colors</h2>
+        <div class="radio-inputs">
+          <div class="radio-item">
+            <input type="radio" name="colors" id="3" value="3" />
+            <label for="3">3</label>
+          </div>
+          <div class="radio-item">
+            <input type="radio" name="colors" id="5" value="5" checked />
+            <label for="5">5</label>
+          </div>
+          <div class="radio-item">
+            <input type="radio" name="colors" id="7" value="7" />
+            <label for="7">7</label>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>Optimization</h2>
+        <div class="radio-inputs">
+          <div class="radio-item">
+            <input type="radio" name="optimization" id="particle-loop" value="particle-loop" checked />
+            <label for="particle-loop">Particle Loop<span>No Optimized</span></label>
+          </div>
+          <div class="radio-item">
+            <input type="radio" name="optimization" id="uniform-grid" value="uniform-grid" />
+            <label for="uniform-grid">Uniform Grid</label>
+          </div>
+        </div>
+      </section>
+      <a>Particle Life Simulation</a>
+    </main>
+  </body>
+</html>

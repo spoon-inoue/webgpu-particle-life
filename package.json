@@ -1,0 +1,32 @@
+{
+  "name": "webgpu-particle-life",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "start": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/draco3dgltf": "^1.4.3",
+    "@types/node": "^26.1.2",
+    "@types/path-browserify": "^1.0.3",
+    "@vitejs/plugin-basic-ssl": "^2.3.0",
+    "@webgpu/types": "^0.1.71",
+    "prettier": "^3.9.6",
+    "typescript": "^7.0.2",
+    "vite": "^8.1.5"
+  },
+  "dependencies": {
+    "@gltf-transform/core": "^4.4.2",
+    "@gltf-transform/extensions": "^4.4.2",
+    "@gltf-transform/functions": "^4.4.2",
+    "draco3dgltf": "^1.5.7",
+    "lil-gui": "^0.21.0",
+    "stats-gl": "^4.2.3",
+    "webgpu-utils": "^2.1.1",
+    "wgpu-matrix": "^3.4.2"
+  }
+}
