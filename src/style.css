@@ -19,8 +19,13 @@ body {
 
 main {
   position: absolute;
+  max-width: 100%;
 
   section {
+    @media (width < 750px) {
+      width: 314px;
+    }
+
     + section {
       margin-top: 20px;
     }
@@ -35,6 +40,7 @@ main {
 
     .radio-inputs {
       display: flex;
+      flex-wrap: wrap;
       gap: 10px;
       font-size: 15px;
 
