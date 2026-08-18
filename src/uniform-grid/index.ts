@@ -3,6 +3,7 @@ import { Display } from './display/Display'
 import { GPU } from '@/modules/GPU'
 import { createResizeObserver, type ResizedSize } from '@/modules/resize'
 import { Simulation } from './simulation/Simulation'
+import { PerformanceErrorDialog } from '@/components/PerformanceErrorDialog'
 
 const gpu = await GPU.request('timestamp-query')
 const canvas = document.querySelector<HTMLCanvasElement>('canvas')!
@@ -12,6 +13,8 @@ const display = new Display(gpu, canvas, simulation)
 
 const stats = new GPUStats({ device: gpu.device, trackGPU: true, trackCPT: true })
 stats.visibleGraph().setGraphLayout('bottom-right', 'horizontal')
+
+const performanceErrorDialog = new PerformanceErrorDialog()
 
 // ===========================
 // render
@@ -44,6 +47,11 @@ function render() {
   stats.update()
 
   step++
+
+  if (10 < step && 30 < stats.getData().gpuCompute) {
+    performanceErrorDialog.showModal()
+    return
+  }
 
   requestAnimationFrame(render)
 }

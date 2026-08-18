@@ -1,0 +1,59 @@
+<dialog class="performance-error-dialog">
+  <div class="panel">
+    <p class="title">Performance Error</p>
+    <p class="message">The Compute Shader execution time exceeded 30 ms.</p>
+    <a>Return Setting Page</a>
+  </div>
+</dialog>
+
+<style>
+  dialog.performance-error-dialog {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    background: unset;
+    outline: unset;
+    border: none;
+
+    &::backdrop {
+      background: color-mix(in srgb, #000, transparent 30%);
+    }
+
+    .panel {
+      padding: 20px;
+      color: #fff;
+      background: color-mix(in srgb, #333, transparent 20%);
+      border: 1px solid color-mix(in srgb, #fff, transparent 50%);
+      outline: unset;
+
+      &:focus {
+        outline: none;
+      }
+
+      .title {
+        font-size: 20px;
+        font-weight: 350;
+      }
+
+      .message {
+        margin-top: 20px;
+        font-size: 15px;
+        font-weight: 300;
+      }
+
+      a {
+        display: block;
+        width: fit-content;
+        margin-top: 50px;
+        margin-inline: auto;
+        font-weight: 300;
+        color: #72d1e9;
+        text-decoration: none;
+        outline: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+</style>

@@ -1,6 +1,6 @@
 /**
  * hsv to rgb
- * @param h 0 ~ 360
+ * @param h degree
  * @param s 0 ~ 1
  * @param v 0 ~ 1
  * @returns [0 ~ 1, 0 ~ 1, 0 ~ 1]

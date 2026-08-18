@@ -8,10 +8,10 @@ type StatsOptions = {
   trackHz?: boolean
 }
 
-type GraphPostion = 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right'
+type GraphPosition = 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right'
 type GraphAlign = 'horizontal' | 'vertical'
 type GraphLayout = {
-  position: GraphPostion
+  position: GraphPosition
   align: GraphAlign
 }
 
@@ -31,7 +31,7 @@ export class GPUStats extends Stats {
     return this
   }
 
-  setGraphLayout(position: GraphPostion, align: GraphAlign) {
+  setGraphLayout(position: GraphPosition, align: GraphAlign) {
     this.graphLayout = { position, align }
     this.updateGraphLayout()
     return this
