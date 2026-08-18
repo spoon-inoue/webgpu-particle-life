@@ -1,10 +1,10 @@
-# WebGPU Boids
+# WebGPU Particle Life
 
 https://spoon-inoue.github.io/webgpu-particle-life/
 
-<img width="1000" alt="スクリーンショット 2026-07-31 181135" src="https://github.com/user-attachments/assets/ec444cdc-f333-4065-8bc2-2bc103826469" />
+<img width="1000" alt="particle-life" src="https://github.com/user-attachments/assets/43eb440b-e1a1-4a1d-9da5-2433cc63e7a8" />
 
 # Reference
 
-- [Coding Challenge 124: Flocking Simulation](https://youtu.be/mhjuuHl6qHM?si=3fNIai-wKnrVHbfi)
-- [クリエイティブコーディングの教科書 Chapter63 Boids](https://zenn.dev/baroqueengine/books/a19140f2d9fc1a/viewer/c33878)
+- [WebGPU Samples - Particle Life](https://webgpu.github.io/webgpu-samples/?sample=particleLife)
+- [The code behind Particle Life](https://youtu.be/scvuli-zcRc?si=cuobhCx5q1su0Cn-)
